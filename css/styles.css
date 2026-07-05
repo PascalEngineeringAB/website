@@ -296,74 +296,67 @@ footer {
 }
 
 /* --- Responsive Menu Adjustments --- */
-/* @media (max-width: 768px) { */
-    /* .nav-container { */
-        /* flex-direction: column; */
-        /* height: auto; */
-        /* padding: 15px 0; */
-    /* } */
-    /* nav ul { */
-        /* margin-top: 15px; */
-    /* } */
-    /* nav ul li { */
-        /* margin: 0 10px; */
-    /* } */
-    /* .hero h1 { */
-        /* font-size: 2.5rem; */
-    /* } */
-    /* /* Added to help height handle small devices gracefully */ */
-    /* .hero { */
-        /* height: auto; */
-        /* padding: 60px 0; */
-    /* } */
-/* } */
-
-/* --- Responsive Menu & Layout Adjustments --- */
 @media (max-width: 768px) {
     /* 1. Reset Header & Stack Navigation Items Vertically */
     .nav-container {
-        flex-direction: column;
-        height: auto;
+        flex-direction: column !important;
+        height: auto !important;
         padding: 15px 0;
     }
     
     nav ul {
         margin-top: 10px;
-        flex-wrap: wrap;           /* Allows items to drop to a new line cleanly if needed */
+        flex-wrap: wrap !important;
         justify-content: center;
-        gap: 15px;                 /* Adds healthy tapping space between links */
+        gap: 15px !important;
+        padding: 0;
     }
     
     nav ul li {
-        margin: 0;                 /* Clear desktop left margins */
+        margin: 0 !important;
     }
 
-    /* 2. Fix the Hero layout and force the background image to stretch 100% width */
+    /* 2. Fix the Hero Layout & Dynamic Background Sizing */
     .hero {
-        width: 100%;
-        height: auto;
-        min-height: 400px;         /* Ensures it remains a clean banner shape on mobile */
-        padding-top: 130px;        /* Pushes text down further since the vertical navbar is now taller */
-        padding-bottom: 40px;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 80vh !important; /* Balances the screen real estate smoothly */
+        padding-top: 160px !important; /* Pushes text down safely below your sticky navbar */
+        padding-bottom: 60px !important;
+        box-sizing: border-box;
     }
     
     .hero-bg {
-        width: 100%;
-        height: 100%;
-        background-size: cover;    /* Forces image to dynamically stretch across the mobile view */
+        width: 100% !important;
+        height: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     .hero h1 {
-        font-size: 2.2rem;         /* Shrinks the huge title down so it fits nicely on a phone screen */
-        padding: 0 10px;
+        font-size: 2.2rem !important;
+        padding: 0 15px;
     }
     
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
         padding: 0 15px;
-<<<<<<< HEAD
-=======
-		
->>>>>>> 6f42c45c3c30a22e32398f848b849ca5783ba764
+    }
+
+    /* 3. FIX THE COMPRESSED CARDS (Grid Fix) */
+    .services .grid,
+    .projects .grid {
+        grid-template-columns: 1fr !important; /* Forces a beautiful single-column stack on mobile */
+        max-width: 100% !important;
+        padding: 0 10px;
+    }
+    
+    .card {
+        padding: 25px 20px !important;
+    }
+
+    /* 4. General Section Padding Scale Down */
+    section {
+        padding: 60px 0 !important;
     }
 }
