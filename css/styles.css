@@ -135,11 +135,11 @@ nav ul li a:hover {
     animation-delay: 0s;
 }
 .bg2 {
-    background-image: linear-gradient(rgba(10, 21, 32, 0.0), rgba(10, 21, 32, 0.4)), url('../images/ndb.jpg');
+    background-image: linear-gradient(rgba(10, 21, 32, 0.0), rgba(10, 21, 32, 0.4)), url('../images/ndb.JPG');
     animation-delay: 10s; 
 }
 .bg3 {
-    background-image: linear-gradient(rgba(10, 21, 32, 0.0), rgba(10, 21, 32, 0.4)), url('../images/ndb2.jpg');
+    background-image: linear-gradient(rgba(10, 21, 32, 0.0), rgba(10, 21, 32, 0.4)), url('../images/ndb2.JPG');
     animation-delay: 20s; 
 }
 
