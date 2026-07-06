@@ -323,7 +323,7 @@ footer {
     .hero {
         width: 100% !important;
         height: auto !important;
-        min-height: 80vh !important; /* Balances the screen real estate smoothly */
+        min-height: 85vh !important; /* Balances the screen real estate smoothly */
         padding-top: 160px !important; /* Pushes text down safely below your sticky navbar */
         padding-bottom: 60px !important;
         box-sizing: border-box;
