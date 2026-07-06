@@ -402,6 +402,6 @@ footer {
     /* 4. General Section Padding Scale Down */
     section {
         padding: 60px 0 !important;
-		scroll-margin-top: 100px !important;
+		scroll-margin-top: 70px !important;
     }
 }
