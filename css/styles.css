@@ -24,9 +24,11 @@ body {
     background-color: #ffffff;
 }
 
+/* Fix 1: Precise scroll offset for header */
 section, 
-#home {
-    scroll-margin-top: 120px; /* Offset matches fixed header height (120px) */
+#home,
+footer {
+    scroll-margin-top: 120px;
 }
 
 h1, h2, h3, .eyebrow, .btn, nav ul li a, .logo {
@@ -133,24 +135,13 @@ nav ul li a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    /* position: relative; */
-    /* width: 100%; */
-    /* min-height: 60vh; */
-    /* padding-top: 400px; */
-    /* overflow: hidden; */
-    /* display: flex; */
-    /* align-items: center; */
-	
-	position: relative;
-    width: 100%;                  /* Fills the horizontal screen */
-    min-height: 60vh;            /* Gives it a strong, balanced height */
-    padding-top: 000px;            /* Pushes down text so the fixed navbar doesn't block it */
+    position: relative;
+    width: 100%;
+    min-height: 65vh;
     overflow: hidden;
-    
     display: flex;         
     align-items: center;   
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
 }
 
 .hero-bg {
@@ -171,9 +162,9 @@ nav ul li a:hover {
     z-index: 2;
     color: white;
     text-align: left;
-	padding-left: 80px;
-    padding-top: 300px;
-    padding-bottom: 30px;
+    padding-left: 80px;
+    padding-top: 160px;
+    padding-bottom: 60px;
 }
 
 .bg1 {
@@ -241,10 +232,11 @@ nav ul li a:hover {
     box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.9);
 }
 
+/* Fix 4: Lift chevron vertical placement */
 .hero-chevron {
     position: absolute;
-    right: 20%;
-    bottom: 00px;
+    right: 15%;
+    bottom: 50px;
     width: 90px;
     height: 100px;
     z-index: 3;
@@ -282,7 +274,6 @@ nav ul li a:hover {
 
 .banner-quote h2 {
     color: white;
-    /* color: var(--off-white); */
     font-size: 2.3rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -404,51 +395,78 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive Adjustments (Mobile) --- */
 @media (max-width: 768px) {
-    section {
-        padding: 60px 0 !important;
+
+    /* Fix 1: Mobile scroll margin */
+    section, 
+    #home,
+    footer {
+        scroll-margin-top: 120px !important; 
     }
-	
-	section, 
-    #home {
-        scroll-margin-top: 160px !important; 
+
+    section {
+        padding: 50px 0 !important;
     }
 
     .nav-container {
         flex-direction: column;
         height: auto;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
+    /* Fix 3: Larger logo on mobile */
     .logo-img {
-        height: 44px;
+        height: 65px;
     }
 
+    /* Fix 2: Keep nav links on one row */
     nav ul {
-        margin-top: 12px;
-        flex-wrap: wrap;
+        margin-top: 8px;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 4px 0;
     }
-	
-	nav ul li a {
-		font-size: 0.8rem;
-	}
 
+    nav ul li {
+        margin-left: 6px;
+    }
+
+    nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    nav ul li:not(:last-child)::after {
+        margin-left: 6px;
+        font-size: 0.75rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hero adjustments */
     .hero {
-        min-height: 80vh;
-        padding-top: 130px;
-        padding-bottom: 60px;
+        min-height: 70vh;
+        padding-top: 120px;
+        padding-bottom: 40px;
     }
 
     .hero-content {
-        padding: 0 5px;
+        padding: 40px 15px 0;
         max-width: 100%;
     }
 
     .hero h1 {
         font-size: 2.2rem;
+    }
+
+    /* Fix 4: Raised mobile chevron */
+    .hero-chevron {
+        right: 20px;
+        width: 50px;
+        height: 40px;
+        bottom: 35px;
     }
 
     .section-heading {
@@ -480,12 +498,5 @@ footer .copyright {
 
     .service-card {
         padding: 35px 25px;
-    }
-
-    .hero-chevron {
-        right: 20px;
-        width: 60px;
-        height: 50px;
-        bottom: 24px;
     }
 }
