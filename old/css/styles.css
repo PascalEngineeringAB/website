@@ -16,11 +16,6 @@ body {
     background-color:#f0f4f8;
 }
 
-section, 
-#home {
-    scroll-margin-top: 120px; /* Offset matches fixed header height (120px) */
-}
-
 .logo-img{
   height: 100px;   /* adjust to taste */
   width: auto;
@@ -370,11 +365,6 @@ footer {
     }
 
     /* 4. General Section Padding Scale Down */
-	section, 
-    #home {
-        scroll-margin-top: 140px !important; 
-    }
-	
     section {
         padding: 60px 0 !important;
     }
