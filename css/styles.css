@@ -397,7 +397,9 @@ footer .copyright {
 
 /* --- Responsive Adjustments (Mobile) --- */
 @media (max-width: 768px) {
-
+    html {
+        scroll-behavior: smooth;
+    }
     /* Fix 1: Mobile scroll margin */
     section, 
     #home,
