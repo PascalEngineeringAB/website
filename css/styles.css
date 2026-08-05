@@ -168,27 +168,27 @@ nav ul li a:hover {
 }
 
 .bg1 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/abb.png');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/abb.png');
     animation-delay: 0s;
 }
 .bg2 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/ndb.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/ndb.JPG');
     animation-delay: 10s;
 }
 .bg3 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/ndb2.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/ndb2.JPG');
     animation-delay: 20s;
 }
 .bg4 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/hfmi2.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/hfmi2.JPG');
     animation-delay: 30s;
 }
 .bg5 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/hfmi1.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/hfmi1.JPG');
     animation-delay: 40s;
 }
 .bg6 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/uvhj.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/uvhj.JPG');
     animation-delay: 50s;
 }
 
@@ -261,7 +261,7 @@ nav ul li a:hover {
 /* --- Banner Quote --- */
 .banner-quote {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(230, 238, 247, 0.0)), url('../images/steel.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(230, 238, 247, 0.0)), url('../Lollos/images/steel.JPG');
     background-size: cover;
     background-position: center 30%;
     padding: 110px 80px;

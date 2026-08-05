@@ -195,6 +195,11 @@
 	<script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                // Only run custom smooth scroll on Desktop (screens wider than 768px)
+                if (window.innerWidth <= 768) {
+                    return; // Let the phone handle the link natively
+                }
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
 
@@ -202,12 +207,10 @@
                 if (targetElement) {
                     e.preventDefault();
 
-                    // Calculate target offset dynamically based on screen width
-                    const headerOffset = window.innerWidth <= 768 ? 110 : 120;
+                    const headerOffset = 120;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                    // Custom smooth animation loop (works in Brave PC)
                     smoothScrollTo(offsetPosition, 600);
                 }
             });
@@ -226,7 +229,6 @@
                 if (timeElapsed < duration) requestAnimationFrame(animation);
             }
 
-            // Quadratic Easing for natural movement
             function easeInOutQuad(t, b, c, d) {
                 t /= d / 2;
                 if (t < 1) return c / 2 * t * t + b;
