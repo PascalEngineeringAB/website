@@ -10,7 +10,7 @@
     --navy: #2e456b;
     --navy-light: #4a6a99;
     --off-white: #f0f4f8;
-    --text-body: #1c1f24;
+    --text-body: #454b55;
 }
 
 html {
@@ -84,11 +84,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 84px;
 }
 
 .logo-img {
-    height: 100px;
+    height: 60px;
     width: auto;
     display: block;
 }
@@ -116,7 +116,7 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: color 0.3s;
@@ -128,24 +128,13 @@ nav ul li a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    /* position: relative; */
-    /* width: 100%; */
-    /* min-height: 60vh; */
-    /* padding-top: 400px; */
-    /* overflow: hidden; */
-    /* display: flex; */
-    /* align-items: center; */
-	
-	position: relative;
-    width: 100%;                  /* Fills the horizontal screen */
-    min-height: 60vh;            /* Gives it a strong, balanced height */
-    padding-top: 000px;            /* Pushes down text so the fixed navbar doesn't block it */
+    position: relative;
+    width: 100%;
+    min-height: 92vh;
+    padding-top: 84px;
     overflow: hidden;
-    
-    display: flex;         
-    align-items: center;   
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .hero-bg {
@@ -166,9 +155,9 @@ nav ul li a:hover {
     z-index: 2;
     color: white;
     text-align: left;
-	padding-left: 80px;
-    padding-top: 300px;
-    padding-bottom: 30px;
+    max-width: 700px;
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 .bg1 {
@@ -238,17 +227,17 @@ nav ul li a:hover {
 
 .hero-chevron {
     position: absolute;
-    right: 20%;
-    bottom: 00px;
+    right: 8%;
+    bottom: -36px;
     width: 90px;
-    height: 100px;
+    height: 75px;
     z-index: 3;
 }
 
 /* --- About --- */
 .about {
     background-color: #ffffff;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .about-columns {
@@ -264,7 +253,7 @@ nav ul li a:hover {
 /* --- Banner Quote --- */
 .banner-quote {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(230, 238, 247, 0.0)), url('../images/steel.JPG');
+    background-image: linear-gradient(rgba(230, 238, 247, 0.55), rgba(230, 238, 247, 0.55)), url('../images/hfmi2.JPG');
     background-size: cover;
     background-position: center 30%;
     padding: 110px 80px;
@@ -276,8 +265,7 @@ nav ul li a:hover {
 }
 
 .banner-quote h2 {
-    color: white;
-    /* color: var(--off-white); */
+    color: var(--navy);
     font-size: 2.3rem;
     font-weight: 600;
     text-transform: uppercase;
