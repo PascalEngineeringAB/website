@@ -14,7 +14,6 @@
 }
 
 html {
-    /* scroll-behavior: smooth; */
     font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-body);
     line-height: 1.7;
@@ -24,7 +23,7 @@ body {
     background-color: #ffffff;
 }
 
-/* Fix 1: Precise scroll offset for header */
+/* Precise scroll offset for header */
 section, 
 #home,
 footer {
@@ -43,7 +42,7 @@ h1, h2, h3, .eyebrow, .btn, nav ul li a, .logo {
 }
 
 section {
-    padding: 100px 80px;
+    padding: 100px 0;
 }
 
 /* --- Eyebrow labels --- */
@@ -162,33 +161,34 @@ nav ul li a:hover {
     z-index: 2;
     color: white;
     text-align: left;
-    padding-left: 80px;
+    padding-left: 20px;
     padding-top: 160px;
     padding-bottom: 60px;
 }
 
+/* Standardized image paths (check folder location in repo) */
 .bg1 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/abb.png');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/abb.png');
     animation-delay: 0s;
 }
 .bg2 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/ndb.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/ndb.JPG');
     animation-delay: 10s;
 }
 .bg3 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/ndb2.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/ndb2.JPG');
     animation-delay: 20s;
 }
 .bg4 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/hfmi2.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/hfmi2.JPG');
     animation-delay: 30s;
 }
 .bg5 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/hfmi1.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/hfmi1.JPG');
     animation-delay: 40s;
 }
 .bg6 {
-    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../Lollos/images/uvhj.JPG');
+    background-image: linear-gradient(100deg, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.45) 60%), url('../images/uvhj.JPG');
     animation-delay: 50s;
 }
 
@@ -232,7 +232,6 @@ nav ul li a:hover {
     box-shadow: 6px 6px 0 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Fix 4: Lift chevron vertical placement */
 .hero-chevron {
     position: absolute;
     right: 15%;
@@ -261,10 +260,10 @@ nav ul li a:hover {
 /* --- Banner Quote --- */
 .banner-quote {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(230, 238, 247, 0.0)), url('../Lollos/images/steel.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(230, 238, 247, 0.0)), url('../images/steel.JPG');
     background-size: cover;
     background-position: center 30%;
-    padding: 110px 80px;
+    padding: 110px 0;
 }
 
 .banner-quote .container {
@@ -332,7 +331,6 @@ nav ul li a:hover {
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
 /* --- Projects --- */
 .projects {
     background-color: #ffffff;
@@ -371,23 +369,31 @@ nav ul li a:hover {
     font-size: 0.95rem;
 }
 
-/* --- Contact us ---*/
+/* --- Contact Us Section --- */
 .contact {
     background-color: #ffffff;
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0px 0px;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-img {
-    width: 300px;
-    height: 75%;
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
     overflow: hidden;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
+    background-color: #f0f0f0;
 }
 
 .contact-img img {
@@ -402,14 +408,16 @@ nav ul li a:hover {
     font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .contact-card p {
     font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.5;
 }
 
-/* --- Footer / Contact --- */
+/* --- Footer --- */
 footer {
     background-color: var(--dark);
     color: rgba(255, 255, 255, 0.85);
@@ -438,11 +446,11 @@ footer .copyright {
     html {
         scroll-behavior: smooth;
     }
-    /* Fix 1: Mobile scroll margin */
+
     section, 
     #home,
     footer {
-        scroll-margin-top: 120px !important; 
+        scroll-margin-top: 110px !important; 
     }
 
     section {
@@ -452,23 +460,21 @@ footer .copyright {
     .nav-container {
         flex-direction: column;
         height: auto;
-        padding: 10px 0;
+        padding: 12px 0;
     }
 
-    /* Fix 3: Larger logo on mobile */
     .logo-img {
-        height: 65px;
+        height: 55px;
     }
 
-    /* Fix 2: Keep nav links on one row */
     nav ul {
-        margin-top: 8px;
+        margin-top: 10px;
         flex-wrap: nowrap;
         justify-content: center;
     }
 
     nav ul li {
-        margin-left: 6px;
+        margin-left: 8px;
     }
 
     nav ul li:first-child {
@@ -476,12 +482,12 @@ footer .copyright {
     }
 
     nav ul li:not(:last-child)::after {
-        margin-left: 6px;
+        margin-left: 8px;
         font-size: 0.75rem;
     }
 
     nav ul li a {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         letter-spacing: 0.5px;
     }
 
@@ -493,7 +499,7 @@ footer .copyright {
     }
 
     .hero-content {
-        padding: 40px 15px 0;
+        padding: 40px 0 0;
         max-width: 100%;
     }
 
@@ -501,7 +507,6 @@ footer .copyright {
         font-size: 2.2rem;
     }
 
-    /* Fix 4: Raised mobile chevron */
     .hero-chevron {
         right: 20px;
         width: 50px;
@@ -518,7 +523,7 @@ footer .copyright {
     }
 
     .banner-quote {
-        padding: 70px 20px;
+        padding: 70px 0;
     }
 
     .banner-quote .container {
@@ -531,14 +536,22 @@ footer .copyright {
         max-width: 100%;
     }
 
-    .services-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    .projects-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
+	
+	.projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .service-card {
         padding: 35px 25px;
+    }
+
+    .contact-img {
+        max-width: 100%;
+        height: 320px;
     }
 }

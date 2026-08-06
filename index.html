@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
 
@@ -24,7 +24,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <!--<li><a href="#projects">Projects</a></li>-->
                 </ul>
             </nav>
         </div>
@@ -60,9 +59,7 @@
             <h2 class="section-heading">Proven experience that <em>exceeds your expectations</em></h2>
             <div class="about-columns">
                 <p>The vision of Pascal Engineering is to be a leading structural engineering firm in the field of advanced steel structures. We strive for our clients to feel their projects are in safe hands and that we exceed their expectations.</p>
-
                 <p>We want to inspire and continue getting inspired ourselves. By undertaking technically challenging projects, we allow ourselves to learn new solutions, develop new skills, and build experiences which are transferred to new projects.</p>
-
                 <p>By implementing state-of-the-art workflows and modern design tools, we are capable of living up to our promises as well as inspiring the next generation of young engineers who have the same interests and love for engineering as we do!</p>
             </div>
         </div>
@@ -145,7 +142,7 @@
             </div>
         </div>
     </section>
-
+	
     <!-- Projects Section 
     <section id="projects" class="projects">
         <div class="container">
@@ -184,7 +181,7 @@
     </section>
     -->
 	
-	<!-- Concact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <p class="eyebrow">Contact us</p>
@@ -195,7 +192,7 @@
                     </div>
                     <h3>Peter Nilsson</h3>
                     <p>Phone: +46 (0) 730 92 17 00</p>
-					<p>Email: peter.nilsson@pascalengineering.se</p>
+                    <p>Email: peter.nilsson@pascalengineering.se</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-img">
@@ -203,29 +200,27 @@
                     </div>
                     <h3>Poja Shams</h3>
                     <p>Phone: +46 (0) 739 51 55 77</p>
-					<p>Email: poja.shams@pascalengineering.se</p>
+                    <p>Email: poja.shams@pascalengineering.se</p>
                 </div>
             </div>
         </div>
     </section>
-	
-	
-    <!-- Footer / Contact -->
-    <footer id="contact">
+
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <p class="eyebrow eyebrow-light footer-heading">Contact Us</p>
+            <p class="eyebrow eyebrow-light footer-heading">Pascal Engineering</p>
             <p>Email: info@pascalengineering.se</p>
             <p>Phone: +46 (0) 739 51 55 77</p>
             <p class="copyright">&copy; 2026 Pascal Engineering. All rights reserved.</p>
         </div>
     </footer>
 
-	<script>
+    <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Only run custom smooth scroll on Desktop (screens wider than 768px)
                 if (window.innerWidth <= 768) {
-                    return; // Let the phone handle the link natively
+                    return;
                 }
 
                 const targetId = this.getAttribute('href');
