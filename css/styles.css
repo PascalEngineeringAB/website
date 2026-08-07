@@ -443,6 +443,34 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.footer-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--navy-light);
+}
+
+.footer-social-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-social-link:hover {
+    color: #0a66c2; /* Official LinkedIn Blue */
+    transform: translateY(-2px);
+}
+
+.linkedin-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
 /* --- Responsive Adjustments (Mobile) --- */				
 @media (max-width: 768px) {
     html, body {
@@ -562,4 +590,14 @@ footer .copyright {
         max-width: 100%;
         height: 320px;
     }
+	
+	.footer-social-link {
+		margin-top: 20px;
+		padding: 8px; /* Increases the clickable touch area on mobile */
+	}
+
+	.linkedin-icon {
+		width: 36px; /* Slightly larger for easier tapping on phone screens */
+		height: 36px;
+	}
 }
