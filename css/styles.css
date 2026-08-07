@@ -443,8 +443,12 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* --- Responsive Adjustments (Mobile) --- */
+/* --- Responsive Adjustments (Mobile) --- */				
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     html {
         scroll-behavior: smooth;
     }
@@ -476,7 +480,7 @@ footer .copyright {
     }
 
     nav ul li {
-        margin-left: 8px;
+        margin-left: 6px;
     }
 
     nav ul li:first-child {
@@ -484,7 +488,7 @@ footer .copyright {
     }
 
     nav ul li:not(:last-child)::after {
-        margin-left: 8px;
+        margin-left: 6px;
         font-size: 0.75rem;
     }
 
@@ -538,6 +542,7 @@ footer .copyright {
         max-width: 100%;
     }
 
+	.services-grid,
     .projects-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -546,6 +551,11 @@ footer .copyright {
 
     .service-card {
         padding: 35px 25px;
+    }
+	
+	.contact-card {
+        align-items: center;
+        text-align: center;
     }
 
     .contact-img {
